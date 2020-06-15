@@ -22,9 +22,9 @@ class CTFdScrape(object):
 
   def __init__(self, args):
     self.auth      = dict(name=args.user, password=args.passwd)
+    self.scheme    = args.scheme
     self.url       = self.__parseUrl(args.url)
     self.worker    = args.worker
-    self.scheme    = args.scheme
     self.override  = args.override
     self.nofile    = args.no_download
     self.basepath  = args.path
